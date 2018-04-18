@@ -56,6 +56,39 @@ CMAKE_BINARY_DIR = /home/robotino/catkin_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -77,17 +110,6 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -98,28 +120,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install
 install: preinstall
@@ -166,34 +166,94 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
-.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-robotino_camera_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
+nav_msgs_generate_messages_lisp: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : robotino_camera_node
+.PHONY : nav_msgs_generate_messages_lisp
 
 # fast build rule for target.
-robotino_camera_node/fast:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build
-.PHONY : robotino_camera_node/fast
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
-.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-robotino_laserrangefinder_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
+nav_msgs_generate_messages_eus: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
-.PHONY : robotino_laserrangefinder_node
+.PHONY : nav_msgs_generate_messages_eus
 
 # fast build rule for target.
-robotino_laserrangefinder_node/fast:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build
-.PHONY : robotino_laserrangefinder_node/fast
+nav_msgs_generate_messages_eus/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
+
+# Convenience name for target.
+robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
+
+.PHONY : robotino_node
+
+# fast build rule for target.
+robotino_node/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build
+.PHONY : robotino_node/fast
 
 # Convenience name for target.
 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/rule:
@@ -211,19 +271,34 @@ robotino_odometry_node/fast:
 .PHONY : robotino_odometry_node/fast
 
 # Convenience name for target.
-robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
-.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
 
 # Convenience name for target.
-robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/rule
+robotino_laserrangefinder_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/rule
 
-.PHONY : robotino_node
+.PHONY : robotino_laserrangefinder_node
 
 # fast build rule for target.
-robotino_node/fast:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build
-.PHONY : robotino_node/fast
+robotino_laserrangefinder_node/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build
+.PHONY : robotino_laserrangefinder_node/fast
+
+# Convenience name for target.
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
+
+# Convenience name for target.
+robotino_camera_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/rule
+
+.PHONY : robotino_camera_node
+
+# fast build rule for target.
+robotino_camera_node/fast:
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build
+.PHONY : robotino_camera_node/fast
 
 src/AnalogInputArrayROS.o: src/AnalogInputArrayROS.cpp.o
 
@@ -285,8 +360,8 @@ src/CameraROS.o: src/CameraROS.cpp.o
 
 # target to build an object file
 src/CameraROS.cpp.o:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.o
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/CameraROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.o
 .PHONY : src/CameraROS.cpp.o
 
 src/CameraROS.i: src/CameraROS.cpp.i
@@ -295,8 +370,8 @@ src/CameraROS.i: src/CameraROS.cpp.i
 
 # target to preprocess a source file
 src/CameraROS.cpp.i:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.i
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/CameraROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.i
 .PHONY : src/CameraROS.cpp.i
 
 src/CameraROS.s: src/CameraROS.cpp.s
@@ -305,8 +380,8 @@ src/CameraROS.s: src/CameraROS.cpp.s
 
 # target to generate assembly for a file
 src/CameraROS.cpp.s:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.s
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/CameraROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/CameraROS.cpp.s
 .PHONY : src/CameraROS.cpp.s
 
 src/ComROS.o: src/ComROS.cpp.o
@@ -315,10 +390,10 @@ src/ComROS.o: src/ComROS.cpp.o
 
 # target to build an object file
 src/ComROS.cpp.o:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.o
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.o
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.o
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/ComROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.o
 .PHONY : src/ComROS.cpp.o
 
 src/ComROS.i: src/ComROS.cpp.i
@@ -327,10 +402,10 @@ src/ComROS.i: src/ComROS.cpp.i
 
 # target to preprocess a source file
 src/ComROS.cpp.i:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.i
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.i
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.i
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/ComROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.i
 .PHONY : src/ComROS.cpp.i
 
 src/ComROS.s: src/ComROS.cpp.s
@@ -339,10 +414,10 @@ src/ComROS.s: src/ComROS.cpp.s
 
 # target to generate assembly for a file
 src/ComROS.cpp.s:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.s
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.s
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.s
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/ComROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/ComROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/ComROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_camera_node.dir/src/ComROS.cpp.s
 .PHONY : src/ComROS.cpp.s
 
 src/CompactBHAROS.o: src/CompactBHAROS.cpp.o
@@ -540,8 +615,8 @@ src/LaserRangeFinderROS.o: src/LaserRangeFinderROS.cpp.o
 
 # target to build an object file
 src/LaserRangeFinderROS.cpp.o:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.o
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/LaserRangeFinderROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.o
 .PHONY : src/LaserRangeFinderROS.cpp.o
 
 src/LaserRangeFinderROS.i: src/LaserRangeFinderROS.cpp.i
@@ -550,8 +625,8 @@ src/LaserRangeFinderROS.i: src/LaserRangeFinderROS.cpp.i
 
 # target to preprocess a source file
 src/LaserRangeFinderROS.cpp.i:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.i
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/LaserRangeFinderROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.i
 .PHONY : src/LaserRangeFinderROS.cpp.i
 
 src/LaserRangeFinderROS.s: src/LaserRangeFinderROS.cpp.s
@@ -560,8 +635,8 @@ src/LaserRangeFinderROS.s: src/LaserRangeFinderROS.cpp.s
 
 # target to generate assembly for a file
 src/LaserRangeFinderROS.cpp.s:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.s
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/LaserRangeFinderROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_laserrangefinder_node.dir/src/LaserRangeFinderROS.cpp.s
 .PHONY : src/LaserRangeFinderROS.cpp.s
 
 src/MotorArrayROS.o: src/MotorArrayROS.cpp.o
@@ -624,8 +699,8 @@ src/OdometryROS.o: src/OdometryROS.cpp.o
 
 # target to build an object file
 src/OdometryROS.cpp.o:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.o
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OdometryROS.cpp.o
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.o
 .PHONY : src/OdometryROS.cpp.o
 
 src/OdometryROS.i: src/OdometryROS.cpp.i
@@ -634,8 +709,8 @@ src/OdometryROS.i: src/OdometryROS.cpp.i
 
 # target to preprocess a source file
 src/OdometryROS.cpp.i:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.i
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OdometryROS.cpp.i
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.i
 .PHONY : src/OdometryROS.cpp.i
 
 src/OdometryROS.s: src/OdometryROS.cpp.s
@@ -644,8 +719,8 @@ src/OdometryROS.s: src/OdometryROS.cpp.s
 
 # target to generate assembly for a file
 src/OdometryROS.cpp.s:
-	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.s
 	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OdometryROS.cpp.s
+	cd /home/robotino/catkin_ws/build && $(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_odometry_node.dir/src/OdometryROS.cpp.s
 .PHONY : src/OdometryROS.cpp.s
 
 src/OmniDriveROS.o: src/OmniDriveROS.cpp.o
@@ -924,17 +999,22 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... robotino_camera_node"
-	@echo "... robotino_laserrangefinder_node"
-	@echo "... robotino_odometry_node"
-	@echo "... robotino_node"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... list_install_components"
 	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... test"
-	@echo "... edit_cache"
-	@echo "... rebuild_cache"
+	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... install"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... robotino_node"
+	@echo "... robotino_odometry_node"
+	@echo "... robotino_laserrangefinder_node"
+	@echo "... robotino_camera_node"
 	@echo "... src/AnalogInputArrayROS.o"
 	@echo "... src/AnalogInputArrayROS.i"
 	@echo "... src/AnalogInputArrayROS.s"
