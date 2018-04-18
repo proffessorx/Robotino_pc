@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+. devel/setup.bash
+roslaunch rplidar_ros view_rplidar.launch
