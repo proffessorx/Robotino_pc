@@ -1,0 +1,6 @@
+/home/robotino/catkin_ws/install/_setup_util.py
+/home/robotino/catkin_ws/install/env.sh
+/home/robotino/catkin_ws/install/setup.bash
+/home/robotino/catkin_ws/install/setup.sh
+/home/robotino/catkin_ws/install/setup.zsh
+/home/robotino/catkin_ws/install/.rosinstall

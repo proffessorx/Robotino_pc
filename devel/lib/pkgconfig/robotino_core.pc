@@ -1,0 +1,8 @@
+prefix=/home/robotino/catkin_ws/devel
+
+Name: robotino_core
+Description: Description of robotino_core
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robotino/catkin_ws/devel/lib 
+Requires: 

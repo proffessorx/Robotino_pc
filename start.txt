@@ -1,0 +1,5 @@
+#!/bin/bash
+clear
+. devel/setup.bash
+sudo systemctl start rpcd
+roslaunch robotino_node robotino_node.launch
