@@ -513,6 +513,30 @@ robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/Robotin
 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o.provides.build: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o
 
 
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/flags.make
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o: /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robotino/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o"
+	cd /home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o -c /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp
+
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.i"
+	cd /home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp > CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.i
+
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.s"
+	cd /home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp -o CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.s
+
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.requires:
+
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.requires
+
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.provides: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.requires
+	$(MAKE) -f robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.provides.build
+.PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.provides
+
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.provides.build: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o
+
+
 # Object files for target robotino_node
 robotino_node_OBJECTS = \
 "CMakeFiles/robotino_node.dir/src/robotino_node.cpp.o" \
@@ -533,7 +557,8 @@ robotino_node_OBJECTS = \
 "CMakeFiles/robotino_node.dir/src/OdometryROS.cpp.o" \
 "CMakeFiles/robotino_node.dir/src/OmniDriveROS.cpp.o" \
 "CMakeFiles/robotino_node.dir/src/PowerManagementROS.cpp.o" \
-"CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o"
+"CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o" \
+"CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o"
 
 # External object files for target robotino_node
 robotino_node_EXTERNAL_OBJECTS =
@@ -557,6 +582,7 @@ robotino_node_EXTERNAL_OBJECTS =
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OmniDriveROS.cpp.o
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/PowerManagementROS.cpp.o
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o
+/home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/build.make
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: /usr/local/robotino/api2/lib/librec_robotino_api2.so
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: /opt/ros/kinetic/lib/libimage_transport.so
@@ -594,7 +620,7 @@ robotino_node_EXTERNAL_OBJECTS =
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
 /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robotino/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robotino/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX executable /home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node"
 	cd /home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/robotino_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -621,6 +647,7 @@ robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires: r
 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OmniDriveROS.cpp.o.requires
 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/PowerManagementROS.cpp.o.requires
 robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o.requires
+robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires: robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o.requires
 
 .PHONY : robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/requires
 

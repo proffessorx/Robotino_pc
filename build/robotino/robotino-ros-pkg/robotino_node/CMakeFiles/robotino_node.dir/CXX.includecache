@@ -480,6 +480,12 @@ ros/ros.h
 robotino_msgs/PowerReadings.h
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/include/robotino_msgs/PowerReadings.h
 
+/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/include/RobotinoConfigNode.h
+ComROS.h
+/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/include/ComROS.h
+ros/ros.h
+-
+
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/include/RobotinoNode.h
 AnalogInputArrayROS.h
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/include/AnalogInputArrayROS.h
@@ -597,6 +603,10 @@ OmniDriveROS.h
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/PowerManagementROS.cpp
 PowerManagementROS.h
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/PowerManagementROS.h
+
+/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp
+RobotinoConfigNode.h
+/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.h
 
 /home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoNode.cpp
 RobotinoNode.h

@@ -14,6 +14,21 @@
 # EXTERNAL cache entries
 ########################
 
+//Build Box2D examples
+BOX2D_BUILD_EXAMPLES:BOOL=OFF
+
+//Build Box2D shared libraries
+BOX2D_BUILD_SHARED:BOOL=OFF
+
+//Build Box2D static libraries
+BOX2D_BUILD_STATIC:BOOL=ON
+
+//Install Box2D libs, includes, and CMake scripts
+BOX2D_INSTALL:BOOL=ON
+
+//Install Box2D documentation
+BOX2D_INSTALL_DOC:BOOL=OFF
+
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
@@ -43,6 +58,18 @@ BULLET_SOFTBODY_LIBRARY:FILEPATH=BULLET_SOFTBODY_LIBRARY-NOTFOUND
 
 //Path to a library.
 BULLET_SOFTBODY_LIBRARY_DEBUG:FILEPATH=BULLET_SOFTBODY_LIBRARY_DEBUG-NOTFOUND
+
+//Value Computed by CMake
+Box2D_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/mvsim/externals/Box2D
+
+//Path to Box2D CMake config file
+Box2D_DIR:PATH=/home/robotino/catkin_ws/build/mvsim/externals/Box2D/Box2D
+
+//Dependencies for target
+Box2D_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+Box2D_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/mvsim/externals/Box2D
 
 //List of ';' separated packages to exclude
 CATKIN_BLACKLIST_PACKAGES:STRING=
@@ -237,11 +264,20 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
+//Value Computed by CMake
+LIBMVSIM_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/mvsim/libmvsim
+
+//Value Computed by CMake
+LIBMVSIM_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/mvsim/libmvsim
+
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
 //Path to a program.
 LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
+
+//The directory containing a CMake configuration file for MRPT.
+MRPT_DIR:PATH=/opt/ros/kinetic/share/mrpt
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
@@ -409,6 +445,9 @@ map_server_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/navigation/map_serve
 //Value Computed by CMake
 map_server_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/navigation/map_server
 
+//The directory containing a CMake configuration file for marker_msgs.
+marker_msgs_DIR:PATH=/opt/ros/kinetic/share/marker_msgs/cmake
+
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
 
@@ -417,6 +456,27 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for mrpt_bridge.
+mrpt_bridge_DIR:PATH=/opt/ros/kinetic/share/mrpt_bridge/cmake
+
+//The directory containing a CMake configuration file for mrpt_msgs.
+mrpt_msgs_DIR:PATH=/opt/ros/kinetic/share/mrpt_msgs/cmake
+
+//Value Computed by CMake
+mvsim_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/mvsim
+
+//Dependencies for the target
+mvsim_LIB_DEPENDS:STATIC=general;mrpt-base;general;mrpt-opengl;general;mrpt-obs;general;mrpt-graphs;general;mrpt-maps;general;mrpt-gui;general;mrpt-tfest;general;Box2D;
+
+//Value Computed by CMake
+mvsim_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/mvsim
+
+//Value Computed by CMake
+mvsim_app_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/mvsim/mvsim_app
+
+//Value Computed by CMake
+mvsim_app_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/mvsim/mvsim_app
 
 //The directory containing a CMake configuration file for nav_core.
 nav_core_DIR:PATH=/opt/ros/kinetic/share/nav_core/cmake
@@ -565,6 +625,9 @@ std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/kinetic/share/std_srvs/cmake
 
+//The directory containing a CMake configuration file for stereo_msgs.
+stereo_msgs_DIR:PATH=/opt/ros/kinetic/share/stereo_msgs/cmake
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/kinetic/share/tf2/cmake
 
@@ -583,6 +646,12 @@ tf_DIR:PATH=/opt/ros/kinetic/share/tf/cmake
 //The directory containing a CMake configuration file for topic_tools.
 topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
 
+//Value Computed by CMake
+vfk_msb_client_BINARY_DIR:STATIC=/home/robotino/catkin_ws/build/vfk_msb_client-1.4/vfk_msb_client
+
+//Value Computed by CMake
+vfk_msb_client_SOURCE_DIR:STATIC=/home/robotino/catkin_ws/src/vfk_msb_client-1.4/vfk_msb_client
+
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
 
@@ -597,6 +666,16 @@ xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: BOX2D_BUILD_EXAMPLES
+BOX2D_BUILD_EXAMPLES-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BOX2D_BUILD_SHARED
+BOX2D_BUILD_SHARED-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BOX2D_BUILD_STATIC
+BOX2D_BUILD_STATIC-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BOX2D_INSTALL
+BOX2D_INSTALL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: BOX2D_INSTALL_DOC
+BOX2D_INSTALL_DOC-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BULLET_COLLISION_LIBRARY
 BULLET_COLLISION_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: BULLET_COLLISION_LIBRARY_DEBUG
@@ -712,7 +791,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=19
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

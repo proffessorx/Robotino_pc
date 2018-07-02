@@ -1,0 +1,189 @@
+{
+    "uuid": "pview",
+    "name": "ProductionView",
+    "description": "Application for visualisation of Data",
+    "events": [
+        {
+            "@id": 1,
+            "eventId": "VECTOR",
+            "name": "Vector",
+            "description": "A GUI vector",
+            "dataFormat": {
+                "dataObject": {
+                    "$ref": "#/definitions/Vector3"
+                },
+                "Vector3": {
+                    "type": "object",
+                    "properties": {
+                        "x": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "y": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "z": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "@id": 2,
+            "eventId": "PitaskTaskId",
+            "name": "Pitasc Task",
+            "description": "Task to start",
+            "dataFormat": {
+                "dataObject": {
+                    "type": "string"
+                }
+            }
+        },
+        {
+            "@id": 3,
+            "eventId": "TEST",
+            "name": "Test",
+            "description": "testing",
+            "dataFormat": {
+                "dataObject": {
+                    "$ref": "#/definitions/PitascTasklist"
+                },
+                "PitascTasklist": {
+                    "type": "object",
+                    "properties": {
+                        "ids": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "names": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "descs": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "functions": [
+        {
+            "@id": 1,
+            "functionId": "/pitasc/progress",
+            "dataFormat": {
+                "progress": {
+                    "$ref": "#/definitions/PitascProgress"
+                },
+                "PitascProgress": {
+                    "type": "object",
+                    "properties": {
+                        "names": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "prog": {
+                            "type": "array",
+                            "items": {
+                                "type": "number",
+                                "format": "float"
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "progress",
+            "description": "Progress to display"
+        },
+        {
+            "@id": 2,
+            "functionId": "/pitasc/tasks",
+            "dataFormat": {
+                "tasks": {
+                    "$ref": "#/definitions/PitascTasklist"
+                },
+                "PitascTasklist": {
+                    "type": "object",
+                    "properties": {
+                        "ids": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "names": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "descs": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            },
+            "name": "tasks",
+            "description": "Tasks to display",
+            "responseEvents": [
+                2
+            ]
+        },
+        {
+            "@id": 3,
+            "functionId": "/plotHandler/plotThis",
+            "dataFormat": {
+                "vector": {
+                    "$ref": "#/definitions/Vector3"
+                },
+                "Vector3": {
+                    "type": "object",
+                    "properties": {
+                        "x": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "y": {
+                            "type": "number",
+                            "format": "float"
+                        },
+                        "z": {
+                            "type": "number",
+                            "format": "float"
+                        }
+                    }
+                }
+            },
+            "name": "plotThis",
+            "description": "Plot This"
+        },
+        {
+            "@id": 4,
+            "functionId": "/plotHandler/logThis",
+            "dataFormat": {
+                "to_log": {
+                    "type": "string"
+                }
+            },
+            "name": "logThis",
+            "description": "Log This"
+        }
+    ],
+    "token": "pviewsecret",
+    "@class": "Application"
+}

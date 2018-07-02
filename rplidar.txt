@@ -2,4 +2,3 @@
 clear
 sudo chmod 666 /dev/ttyUSB0
 . devel/setup.bash
-roslaunch rplidar_ros view_rplidar.launch

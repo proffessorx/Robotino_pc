@@ -1,0 +1,8 @@
+prefix=/home/robotino/catkin_ws/devel
+
+Name: mvsim
+Description: Description of mvsim
+Version: 0.2.0
+Cflags: -I/home/robotino/catkin_ws/devel/include
+Libs: -L/home/robotino/catkin_ws/devel/lib 
+Requires: dynamic_reconfigure message_runtime nav_msgs roscpp std_msgs sensor_msgs visualization_msgs

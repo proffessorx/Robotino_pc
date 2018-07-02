@@ -21,6 +21,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/OdometryROS.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OdometryROS.cpp.o"
   "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/OmniDriveROS.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/OmniDriveROS.cpp.o"
   "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/PowerManagementROS.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/PowerManagementROS.cpp.o"
+  "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoConfigNode.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o"
   "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/RobotinoNode.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o"
   "/home/robotino/catkin_ws/src/robotino/robotino-ros-pkg/robotino_node/src/robotino_node.cpp" "/home/robotino/catkin_ws/build/robotino/robotino-ros-pkg/robotino_node/CMakeFiles/robotino_node.dir/src/robotino_node.cpp.o"
   )

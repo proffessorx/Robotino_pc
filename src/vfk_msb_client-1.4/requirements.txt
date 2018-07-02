@@ -1,0 +1,3 @@
+git+https://github.com/liris/websocket-client.git
+git+https://github.com/baalexander/rospy_message_converter.git
+iso8601

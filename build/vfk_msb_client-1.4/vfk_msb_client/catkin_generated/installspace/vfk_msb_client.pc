@@ -1,0 +1,8 @@
+prefix=/home/robotino/catkin_ws/install
+
+Name: vfk_msb_client
+Description: Description of vfk_msb_client
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robotino/catkin_ws/install/lib 
+Requires: 

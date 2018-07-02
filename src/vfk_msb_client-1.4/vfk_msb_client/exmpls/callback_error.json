@@ -1,0 +1,14 @@
+{
+    "functionId": "/topic/logistics_goal",
+    "functionParameters": [
+        {
+            "value": {
+                "x": 0.0,
+                "y": 0.0,
+                "rot": 0.0,
+                "z": 0.0
+            },
+            "name": "dataObject"
+        }
+    ]
+}

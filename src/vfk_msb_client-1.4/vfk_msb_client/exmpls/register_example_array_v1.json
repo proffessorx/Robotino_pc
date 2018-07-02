@@ -1,0 +1,60 @@
+{
+    "@class": "SmartObject",
+    "description": "The ROS Bridge",
+    "events": [
+        {
+            "dataFormat": {
+                "dataObject": {
+                    "$ref": "#/definitions/pitasc_vfk-AppList"
+                },
+                "pitasc_vfk-AppList": {
+                    "properties": {
+                        "descs[]": {
+                            "type": "string"
+                        },
+                        "ids[]": {
+                            "type": "string"
+                        },
+                        "names[]": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "description": "ROS event of type pitasc_vfk/AppList (in ROS)",
+            "eventId": "test",
+            "name": "test ROS topic"
+        }
+    ],
+    "functions": [
+        {
+            "dataFormat": {
+                "dataObject": {
+                    "$ref": "#/definitions/geometry_msgs-Point"
+                },
+                "geometry_msgs-Point": {
+                    "properties": {
+                        "x": {
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "y": {
+                            "format": "float",
+                            "type": "number"
+                        },
+                        "z": {
+                            "format": "float",
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "description": "geometry_msgs/Point (in ROS)",
+            "functionId": "/topic/logistics_goal",
+            "name": "logistics_goal ROS topic"
+        }
+    ],
+    "name": "ROS Bridge",
+    "token": "rossecret",
+    "uuid": "ros"
+}

@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/robotino_node.dir/src/OmniDriveROS.cpp.o"
   "CMakeFiles/robotino_node.dir/src/PowerManagementROS.cpp.o"
   "CMakeFiles/robotino_node.dir/src/RobotinoNode.cpp.o"
+  "CMakeFiles/robotino_node.dir/src/RobotinoConfigNode.cpp.o"
   "/home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node.pdb"
   "/home/robotino/catkin_ws/devel/lib/robotino_node/robotino_node"
 )

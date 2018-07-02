@@ -1,0 +1,40 @@
+ <launch>
+	<node name="msb_ros_bridge" pkg="vfk_msb_client" type="msb_ros_bridge.py" output="screen">
+		<!-- MSB to connect to -->
+		<!-- <param name="host" value="ws://localhost:8085" /> -->
+		<!-- <param name="host" value="ws://10.15.5.232:8085" /> -->
+		<!-- <param name="host" value="ws://10.3.2.10:8085" /> -->
+		<!-- <param name="host" value="ws://10.3.6.140:8085" /> -->
+		<!-- <param name="host" value="wss://10.3.6.140:8084" /> -->
+		<param name="host" value="ws://atm.virtualfortknox.de/msb" />
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de" /> -->
+		<!-- <param name="host" value="ws://demo.virtualfortknox.de/msb2" />  -->
+
+		<!-- UUID for connection -->
+		<param name="uuid" value="ros_robo_home" />
+
+		<!-- Name for connection -->
+		<param name="name" value="ROS Bridge Home 1" />
+
+		<!-- Description for connection -->
+		<param name="desc" value="The ROS Bridge" />
+
+		<!-- Token for connection -->
+		<param name="token" value="rossecrets" />
+
+		<!-- Topics to subscribe in ros -->
+		<param name="topics_sub" value="map, test, testProg, testPlot" />
+		<!-- <param name="topics_sub" value="*" /> -->
+		<!-- <param name="topics_sub" value="logistics_pose, /an/array_test" /> -->
+		
+		<!-- Topics to publish in ROS -->
+		<param name="topics_pub" value="
+			/id std_msgs/String,
+			/test_time std_msgs/Time,
+			/move_base/current_goal geometry_msgs/PoseStamped
+		" />
+<!-- 			/base/twist_controller/command_safe geometry_msgs/Twist,
+			/test_command geometry_msgs/PoseStamped, 
+			/message std_msgs/String -->
+	</node>
+</launch>

@@ -1,0 +1,4 @@
+#!/bin/bash
+clear
+export ROS_MASTER_URI=172.26.1.1:11311
+
